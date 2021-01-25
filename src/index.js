@@ -1,1 +1,2 @@
-console.log('xx')
+import x from './x.js'
+console.log(x)
