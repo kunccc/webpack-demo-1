@@ -14,18 +14,12 @@ module.exports = {
   ],
   module: {
     rules: [
+      ...base.module.rules,
       {
         test: /\.css$/i,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '/public/path/to/',
-            },
-          },
-          'css-loader',
+        use: [MiniCssExtractPlugin.loader, 'css-loader'
         ],
-      },
+      }
     ],
   }
   ,
